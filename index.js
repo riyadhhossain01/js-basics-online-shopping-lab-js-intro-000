@@ -64,16 +64,11 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
- var itemLeft = Object.values(cart);
- itemLeft.forEach(function(element){
-   if(item == element )
-   return 'That item is nor in your cart';
- else{
-   delete cart.item
- }});
-
-
-
+if(item == cart.itemName){
+  delete cart[item]
+}else{
+  return "That item is not in your cart."
+}
 }
 
 function placeOrder(cardNumber) {
