@@ -66,6 +66,7 @@ function removeFromCart(item) {
   // write your code here
 if(item == cart.itemName){
   delete cart[item]
+  return cart.item
 }else{
   return "That item is not in your cart."
 }
