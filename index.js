@@ -65,7 +65,7 @@ function total() {
 function removeFromCart(item) {
   // write your code here
 if(item == cart.itemName){
-  var ret = delete cart[item]
+  var ret = delete cart[itemName: {item}]
   return ret
 }else{
   return "That item is not in your cart."
