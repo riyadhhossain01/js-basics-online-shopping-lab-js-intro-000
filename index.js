@@ -19,11 +19,7 @@ function addToCart(item) {
 
   var obj = Object.assign(itemName,itemPrice)
   cart.push(obj)
-
   return `${item} has been added to your cart.`;
-
-  return '${item} has been added to your cart.';
-
 
 
 }
@@ -40,13 +36,9 @@ function viewCart() {
 
       itemName = Object.values(cart[i])
       itemPrice = itemName.splice(1)
-      if(count == 1)
-
+      if(count == 1){
       string += `${itemName} at $${itemPrice}`
-
-      string += '${itemName} at $${itemPrice}'
-
-      else if(count == 2){
+    }else if(count == 2){
       string += `${itemName} at $${itemPrice}, and `
       count--;
     }else if(count >2){
@@ -72,12 +64,16 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-if(item == cart.itemName){
-  delete cart[item]
-  return cart
-}else{
-  return "That item is not in your cart."
-}
+ var itemLeft = Object.values(cart);
+ itemLeft.forEach(function(element){
+   if(item == element )
+   return 'That item is nor in your cart';
+ else{
+   delete cart.item
+ }});
+
+
+
 }
 
 function placeOrder(cardNumber) {
