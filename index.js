@@ -66,8 +66,8 @@ function removeFromCart(item) {
   // write your code here
   for(let i =0; i<cart.length; i++){
     if(item == cart.itemName){ 
-      var ret = delete cart[i][itemName]
-      return cart[i][itemName]
+      var ret = delete cart[i].itemName
+      return cart[i].itemName
     }else{
       return "That item is not in your cart."
       }
