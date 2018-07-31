@@ -85,7 +85,7 @@ function placeOrder(cardNumber) {
     for(let i = 0; i<cart.length; i++){
       cart.pop();
     }
-    return 'Your total cost is $${ret}, which will be charged to the card ${cardNumber} .'
+    return `Your total cost is $${ret}, which will be charged to the card ${cardNumber} .`
   }
 
 }
